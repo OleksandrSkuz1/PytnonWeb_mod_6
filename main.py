@@ -1,14 +1,13 @@
 import logging
-
-from faker import Faker
 import random
 import psycopg2
+from faker import Faker
 from psycopg2 import DatabaseError
 
 fake = Faker()
 
 # Підключення до бази даних
-conn = psycopg2.connect(host="localhost", database="test", user="alex", password="alex")
+conn = psycopg2.connect(host="localhost", database="postgres", user="alex", password="alex")
 cur = conn.cursor()
 
 # Додавання груп
